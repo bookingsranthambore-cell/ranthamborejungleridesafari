@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranthambore Jungle Ride</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        safari: {
+                            green: '#2f5233',
+                            sand: '#f4f1ea',
+                            orange: '#d97706',
+                            dark: '#1a1a1a',
+                            gold: '#fbbf24'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Lora', 'serif'],
+                        sans: ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-safari-sand font-sans text-safari-dark antialiased">
+
+    <!-- NAVIGATION -->
+    <nav class="bg-safari-green text-white py-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-xl md:text-2xl font-serif font-bold">
+                Ranthambore <span class="text-safari-orange">Jungle Ride</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-safari-orange transition">Home</a>
+                <a href="#about" class="hover:text-safari-orange transition">About</a>
+                <a href="#contact" class="hover:text-safari-orange transition">Contact</a>
+            </div>
+            <a href="#booking" class="bg-safari-orange hover:bg-orange-700 text-white px-4 py-2 rounded font-bold transition">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="home" class="hero-bg h-screen flex items-center justify-center text-center px-6">
+        <div class="max-w-4xl">
+            <div class="mb-6">
+                <img src="logo.png" alt="Ranthambore Jungle Ride Logo" class="w-40 md:w-56 mx-auto drop-shadow-2xl rounded-full border-2 border-white/20" onerror="this.style.display='none'"> 
+            </div>
+            <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-4 drop-shadow-md">
+                Welcome to <br/> <span class="text-safari-gold">Ranthambore Jungle Ride</span>
+            </h1>
+            <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                Experience the thrill of the wild. Witness the majestic Royal Bengal Tiger in its natural habitat.
+            </p>
+            <a href="#booking" class="bg-safari-orange text-white text-lg font-bold py-3 px-8 rounded-full shadow-lg hover:bg-orange-700 transition transform hover:scale-105 inline-block">
+                Book Your Ride Now
+            </a>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-16 container mx-auto px-6 text-center md:text-left">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="fort.png" alt="Ranthambore Fort" class="rounded-lg shadow-xl w-full h-auto">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-serif font-bold text-safari-green mb-4">The Jewel of Rajasthan</h2>
+                 <p class="text-gray-700 mb-4 leading-relaxed">
+                    Ranthambore National Park is one of the biggest and most renowned national parks in Northern India. Being considered as one of the famous and former hunting grounds of the Maharajas of Jaipur, today the Ranthambore National Park terrain is a major wildlife tourist attraction.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    Famous for its tiger population, it is one of the best locations in India to see these majestic predators in their natural habitat. Inside, the 10th-century Ranthambore Fort stands tall, overlooking the entire park, adding a historic charm to your adventurous journey.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section id="booking" class="py-16 bg-safari-green text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto bg-white text-safari-dark rounded-lg shadow-2xl p-8 border-t-8 border-safari-orange">
+                <h2 class="text-3xl font-serif font-bold text-center text-safari-green mb-2">Book Your Jungle Ride</h2>
+                <p class="text-center text-gray-600 mb-8 text-sm">Fill out the form below. We will confirm availability via WhatsApp/Phone.</p>
+                
+                <form id="bookingForm" class="space-y-4">
+                    
+                    <!-- 
+                         PASTE YOUR WEB3FORMS ACCESS KEY BELOW 
+                         Replace 'YOUR_ACCESS_KEY_HERE' with the code from your email 
+                    -->
+                    <input type="hidden" name="access_key" value="5028e956-ddce-444d-b52b-3d6428027ddb">
+
+                    <!-- Settings -->
+                    <input type="hidden" name="subject" value="New Safari Booking Request">
+                    <input type="hidden" name="from_name" value="Ranthambore Jungle Ride">
+
+                    <!-- Inputs -->
+                    <div>
+                        <label class="block text-sm font-bold mb-1">Date of Visit</label>
+                        <input type="date" name="date" id="date" required class="w-full p-3 border border-gray-300 rounded focus:border-safari-orange">
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold mb-1">Safari Slot</label>
+                            <select name="slot" id="slot" required class="w-full p-3 border border-gray-300 rounded bg-white">
+                                <option value="Morning">Morning (6:30 AM)</option>
+                                <option value="Afternoon">Afternoon (2:30 PM)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-1">Vehicle Type</label>
+                            <select name="vehicle" id="vehicle" required class="w-full p-3 border border-gray-300 rounded bg-white">
+                                <option value="Jeep">Shared Jeep (6 Seater)</option>
+                                <option value="Canter">Shared Canter (20 Seater)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold mb-1">Number of People</label>
+                        <input type="number" name="people" id="people" min="1" max="20" placeholder="e.g., 4" required class="w-full p-3 border border-gray-300 rounded">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-1">Your Full Name</label>
+                        <input type="text" name="name" id="name" placeholder="John Doe" required class="w-full p-3 border border-gray-300 rounded">
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold mb-1">Phone Number</label>
+                            <input type="tel" name="phone" id="phone" placeholder="10-digit number" required pattern="[0-9]{10}" class="w-full p-3 border border-gray-300 rounded">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-1">Email ID (Optional)</label>
+                            <input type="email" name="email" id="email" placeholder="john@example.com" class="w-full p-3 border border-gray-300 rounded">
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="w-full bg-safari-orange text-white font-bold py-4 rounded hover:bg-orange-700 transition mt-4 text-lg shadow-md">
+                        Send Booking Request
+                    </button>
+                </form>
+
+                <div id="formFeedback" class="hidden mt-4 p-4 bg-green-100 text-green-800 rounded text-center border border-green-200">
+                    <strong>Request Sent!</strong><br> Opening WhatsApp now...
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- FOOTER -->
+    <footer id="contact" class="bg-safari-dark text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            
+            <!-- Title -->
+            <h3 class="text-3xl font-serif font-bold mb-6 text-white">Ranthambore Jungle Ride</h3>
+            
+            <!-- Contact Info (Side by Side with Icons) -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-8 text-sm md:text-base">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-phone-alt text-safari-orange"></i>
+                    <span>+91 85029 65683</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-envelope text-safari-orange"></i>
+                    <span>bookingsranthambore@gmail.com</span>
+                </div>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f fa-lg"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="https://wa.me/918502965683" class="text-gray-400 hover:text-white transition"><i class="fab fa-whatsapp fa-lg"></i></a>
+            </div>
+
+            <!-- Copyright -->
+            <p class="text-gray-500 text-sm">© 2025 Ranthambore Safari Booking. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- LOGIC -->
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const btn = document.getElementById('submitBtn');
+            const feedback = document.getElementById('formFeedback');
+            const originalText = btn.innerHTML;
+
+            // 1. WhatsApp Logic
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+            const slot = document.getElementById('slot').value;
+            const veh = document.getElementById('vehicle').value;
+            const ppl = document.getElementById('people').value;
+            const ph = document.getElementById('phone').value;
+            const msgBody = `*Ranthambore Jungle Ride Booking*%0A%0AName: ${name}%0ADate: ${date}%0ASlot: ${slot}%0AVehicle: ${veh}%0APeople: ${ppl}%0APhone: ${ph}`;
+            
+            // Open WhatsApp immediately
+            window.open(`https://wa.me/918502965683?text=${msgBody}`, '_blank');
+
+            // 2. Email Logic (Web3Forms)
+            const formData = new FormData(this);
+            const json = JSON.stringify(Object.fromEntries(formData));
+
+            btn.innerHTML = "Sending...";
+            btn.disabled = true;
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    btn.innerHTML = "Sent! ✅";
+                    feedback.classList.remove('hidden');
+                } else {
+                    console.log(response);
+                    btn.innerHTML = "WhatsApp Opened!"; 
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                btn.innerHTML = "WhatsApp Opened!";
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    document.getElementById('bookingForm').reset();
+                    feedback.classList.add('hidden');
+                }, 4000);
+            });
+        });
+        
+        document.getElementById('date').min = new Date().toISOString().split("T")[0];
+    </script>
+</body>
+</html>
